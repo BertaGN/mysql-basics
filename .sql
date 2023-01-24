@@ -41,9 +41,7 @@ DELETE FROM employees WHERE emp_no IN (SELECT emp_no FROM salaries WHERE salary 
 DELETE FROM departments WHERE dept_no = (SELECT dept_no FROM dept_emp GROUP BY dept_no ORDER BY count(dept_no) desc limit 1);
 
 
-CREATE TABLE `race_database`.`participants` (`id_conc` INT NOT NULL AUTO_INCREMENT , `first_name` VARCHAR(30) NOT NULL , `last_name` VARCHAR(30) NOT NULL , `birth_date` DATE NOT NULL , PRIMARY KEY (`id_conc`)) ENGINE = InnoDB;
 
-INSERT INTO `participants` (`id_conc`, `first_name`, `last_name`, `birth_date`) VALUES ('1', 'Berta', 'Garcia', '1993-08-26'), ('2', 'Ynohe', 'Sandoval', '1995-06-23'), ('3', 'Kristian', 'Kasimirova', '2001-02-07'), ('4', 'Searchi', 'Clemente', '1987-01-27'), ('5', 'Lucia', 'del Cacho', '2002-10-24');
 
 
 
